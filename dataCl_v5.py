@@ -4,6 +4,9 @@ import glob
 import os
 from sklearn.utils import shuffle
 
+# i have reduced the features as the zero w might not process much data becaus of the 1ghz cpu, 
+#but if you are using a pi 4,5 or similar models you can add more features and add more sample data to train your model. 
+#If you do then you have to change the features count in the arduino file, i have marked the line.
 SELECTED_FEATURES = [
     'Destination Port',
     'Flow Duration',
