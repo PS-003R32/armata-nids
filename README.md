@@ -30,3 +30,16 @@ Adafruit_GFX
 Adafruit_SSD1306
 ```
 Now download the `ei-111125-arduino-1.0.1` as well as the `pico_v1.ino` file. Open the file in the Arduino IDE and clivk on the Verify and Upload button to upload it to pico wh. If you see any errors related to the inbuilt libraries do not worry it will still work its just the errors for compatiblity or old libraries syntax which have no effect on the pico.<br>
+##### pico wh to zero w
+I have used usb to connect the pico to the zero for simplicity but you can use UART RX/TX connection if you want, you can find the pin connection below. You have to change the `PICO_SERIAL_PORT = '/dev/ttyACM0'` in the `zero_opt.py` line 9 to `PICO_SERIAL_PORT = '/dev/serial0'` (its usually this but you can find the exact one by `ls /dev/serial*` or for usb `ls /dev/tty*`).<br>
+
+ ---
+ Install the following libraries on the zero.
+ ```shell
+sudo pip3 install scapy numpy pyserial
+---install individually if the zero stops responding as it just has a 1ghz cpu.---
+```
+Now you just need to run the python script to start the nids. `sudo python3 zero_opt.py`.
+
+---
+If any errors you can state it in the discussions.
