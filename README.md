@@ -1,6 +1,7 @@
 # armata-nids
 This network intrusion detection system uses least hardware that is required to run a simple and effective NIDS. I have used a raspberry pi pico wh, zero w, ssd1306 oled and 1602 lcd displays for this project.
 This project uses a Neural Network Classifier model trained on the `CIC IDS 2017` dataset and is trained on the `Edge Impulse` platform. I will provide the links and references to the trained model of my Edge Impulse profile below in the setup guide. [NOTE: This project is in contineous improvement and development, you might get some problems if you dont have the minimum hardware that i have used. You can pull a new Issue if you find any errors or have any suggestions.
+<img src="https://github.com/user-attachments/assets/e182de03-e594-43a2-a816-a4ea613a8525" alt="hwd" width="270"/>
 
 ---
 ## Hardware
@@ -30,3 +31,16 @@ Adafruit_GFX
 Adafruit_SSD1306
 ```
 Now download the `ei-111125-arduino-1.0.1` as well as the `pico_v1.ino` file. Open the file in the Arduino IDE and clivk on the Verify and Upload button to upload it to pico wh. If you see any errors related to the inbuilt libraries do not worry it will still work its just the errors for compatiblity or old libraries syntax which have no effect on the pico.<br>
+##### pico wh to zero w
+I have used usb to connect the pico to the zero for simplicity but you can use UART RX/TX connection if you want, you can find the pin connection below. You have to change the `PICO_SERIAL_PORT = '/dev/ttyACM0'` in the `zero_opt.py` line 9 to `PICO_SERIAL_PORT = '/dev/serial0'` (its usually this but you can find the exact one by `ls /dev/serial*` or for usb `ls /dev/tty*`).<br>
+
+ ---
+ Install the following libraries on the zero.
+ ```shell
+sudo pip3 install scapy numpy pyserial
+---install individually if the zero stops responding as it just has a 1ghz cpu.---
+```
+Now you just need to run the python script to start the nids. `sudo python3 zero_opt.py`.
+
+---
+If any errors you can state it in the discussions.
