@@ -14,7 +14,7 @@ This is the minimum hardware required to develop and run this nids:
 
 ## Softwares required
 Before you start make sure to install the folowing packages and applications.
-- Arduino IDE
+- Arduino IDE<br>
 You can use the dataset i have provided in this repository or download it from [here](http://cicresearch.ca/CICDataset/CIC-IDS-2017/Dataset/CIC-IDS-2017/CSVs/) to train your own model and your required features input/output. But i will recommend to use the model i trained in this repository or download it from my Edge Impulse profile [here](https://studio.edgeimpulse.com/public/823138/live).
 - Download the zip file `ei-111125-arduino-1.0.1`.
 
@@ -31,7 +31,7 @@ Adafruit_GFX
 Adafruit_SSD1306
 ```
 Now download the `ei-111125-arduino-1.0.1` as well as the `pico_v1.ino` file. Open the file in the Arduino IDE and clivk on the Verify and Upload button to upload it to pico wh. If you see any errors related to the inbuilt libraries do not worry it will still work its just the errors for compatiblity or old libraries syntax which have no effect on the pico.<br>
-##### pico wh to zero w
+#### pico wh to zero w
 I have used usb to connect the pico to the zero for simplicity but you can use UART RX/TX connection if you want, you can find the pin connection below. You have to change the `PICO_SERIAL_PORT = '/dev/ttyACM0'` in the `zero_opt.py` line 9 to `PICO_SERIAL_PORT = '/dev/serial0'` (its usually this but you can find the exact one by `ls /dev/serial*` or for usb `ls /dev/tty*`).<br>
 
  ---
