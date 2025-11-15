@@ -17,6 +17,8 @@ Before you start make sure to install the folowing packages and applications.
 - Arduino IDE<br>
 You can use the dataset i have provided in this repository or download it from [here](http://cicresearch.ca/CICDataset/CIC-IDS-2017/Dataset/CIC-IDS-2017/CSVs/) to train your own model and your required features input/output. But i will recommend to use the model i trained in this repository or download it from my Edge Impulse profile [here](https://studio.edgeimpulse.com/public/823138/live).
 - Download the zip file `ei-111125-arduino-1.0.1`.
+#### create your own training set
+Just place the `dataCL.py` file in the same directory as the `MachineLearningCSV` then adjust the samples accordingly as the comment i have added in the dataCl.py file. You will get the compiled training dataset to train your own model.
 
  ---
 
