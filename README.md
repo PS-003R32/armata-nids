@@ -11,6 +11,21 @@ This is the minimum hardware required to develop and run this nids:
 - SSD1306 OLED
 - 1602 LCD
 - Jumper wires and breadboard. (if you need)
+### Hardware connections
+Data and clock serial pins will be common for both the displays.<br>
+Connect:<br>
+The serial data and clock, ground and vcc will be common for both the displays and connect to the pico , set the common lines on a breadboard:<br>
+|            Pico WH           | SSD1306 & 1602 LCD |
+|------------------------------|--------------------|
+| VBUS (Pin 40) or 3V3 (Pin 36) | VCC                |
+| GND (Pin 38)                 | GND                |
+| GPIO4 (Pin 6)                | SDA (Data Line)    |
+| GPIO5 (Pin 7)                | SCL (Clock Line)   |
+
+### Pico wh to zero w
+You can either use the usb connection or use UART RX/TX for communication b/w pico and zero, i have used usb for ease. but you can connect using rx/tx by connecting pico RX (pin 22) to zero TX (pin 8) and pico TX (pin 21) to zero RX pin 10, a gnd wire to both the boards.
+
+---
 
 ## Softwares required
 Before you start make sure to install the folowing packages and applications.
