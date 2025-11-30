@@ -1,6 +1,6 @@
 # armata-nids
 This network intrusion detection system uses least hardware that is required to run a simple and effective NIDS. I have used a raspberry pi pico wh, zero w, ssd1306 oled and 1602 lcd displays for this project.
-This project uses a Neural Network Classifier model trained on the `CIC IDS 2017` dataset and is trained on the `Edge Impulse` platform. I will provide the links and references to the trained model of my Edge Impulse profile below in the setup guide. [NOTE: This project is in contineous improvement and development, you might get some problems if you dont have the minimum hardware that i have used. You can pull a new Issue if you find any errors or have any suggestions.
+This project uses a Neural Network Classifier model trained on the `CIC IDS 2017` dataset and is trained on the `Edge Impulse` platform. I will provide the links and references to the trained model of my Edge Impulse profile below in the setup guide. [NOTE: This project is in contineous improvement and development, you might get some problems if you dont have the minimum hardware that i have used. You can pull a new Issue if you find any errors or have any suggestions. [Video](https://www.youtube.com/watch?v=zJ92Vnly6WM) Demonstration.<br>
 <img src="https://github.com/user-attachments/assets/e182de03-e594-43a2-a816-a4ea613a8525" alt="hwd" width="270"/>
 
 ---
