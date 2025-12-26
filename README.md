@@ -61,3 +61,8 @@ Now you just need to run the python script to start the nids. `sudo python3 zero
 
 ---
 If any errors you can state it in the discussions.
+
+---
+## License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
